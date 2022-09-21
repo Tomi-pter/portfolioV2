@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'ComboRegular';
+    src: url('./assets/fonts/Combo/fonts/ComboRegular.eot');
+    src: url('./assets/fonts/Combo/fonts/ComboRegular.eot') format('embedded-opentype'), url('./assets/fonts/Combo/fonts/ComboRegular.woff2') format('woff2'), url('./assets/fonts/Combo/fonts/ComboRegular.woff') format('woff'), url('./assets/fonts/Combo/fonts/ComboRegular.ttf') format('truetype'), url('./assets/fonts/Combo/fonts/ComboRegular.svg#ComboRegular') format('svg');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'PoiretOneRegular';
+    src: url('./assets/fonts/Poiret_One/fonts/PoiretOneRegular.eot');
+    src: url('./assets/fonts/Poiret_One/fonts/PoiretOneRegular.eot') format('embedded-opentype'), url('./assets/fonts/Poiret_One/fonts/PoiretOneRegular.woff2') format('woff2'), url('./assets/fonts/Poiret_One/fonts/PoiretOneRegular.woff') format('woff'), url('./assets/fonts/Poiret_One/fonts/PoiretOneRegular.ttf') format('truetype'), url('./assets/fonts/Poiret_One/fonts/PoiretOneRegular.svg#PoiretOneRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'HandleeRegular';
+    src: url('./assets/fonts/Handlee/fonts/HandleeRegular.eot');
+    src: url('./assets/fonts/Handlee/fonts/HandleeRegular.eot') format('embedded-opentype'), url('./assets/fonts/Handlee/fonts/HandleeRegular.woff2') format('woff2'), url('./assets/fonts/Handlee/fonts/HandleeRegular.woff') format('woff'), url('./assets/fonts/Handlee/fonts/HandleeRegular.ttf') format('truetype'), url('./assets/fonts/Handlee/fonts/HandleeRegular.svg#HandleeRegular') format('svg');
+}
+
+:root {
+    --my-blue: rgb(59, 168, 227);
+    --hover-blue: rgb(4, 157, 240);
+    --dark: rgb(3, 3, 52);
+}
+
+body {
+    margin: 0;
+    font-family: 'ComboRegular';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'ComboRegular';
 }
