@@ -16,30 +16,23 @@ export const HeaderStyled = styled.header`
     justify-content: space-between;
     align-items: center;
 
-    a,
-    nav {
+    a {
       transform: translateY(-100%);
       opacity: 0;
       transition: background-color 350ms, opacity 500ms, transform 500ms;
     }
     nav {
-      transform: translateX(100px);
+      opacity: 0;
+      transition: all 500ms;
     }
   }
   .header.inView {
-    a,
-    nav {
+    a {
       transform: translateY(0);
       opacity: 1;
     }
-
-    @media screen and (max-width: 640px) {
-      nav {
-        transform: translateX(100px);
-      }
-      nav.open {
-        transform: translateX(0);
-      }
+    nav {
+      opacity: 1;
     }
   }
 
@@ -53,35 +46,54 @@ export const HeaderStyled = styled.header`
     align-items: center;
   }
 
-  nav {
-    background-color: whitesmoke;
-    height: 100vh;
-    width: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    transition: all 350ms;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @media screen and (max-width: 640px) {
+    nav {
+      background-color: whitesmoke;
+      height: 100vh;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 350ms;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: -1;
 
-    ul {
-      list-style: none;
-      padding: 0;
-
-      li {
-        margin: 4rem 0;
+      ul {
+        list-style: none;
         padding: 0;
+
+        li {
+          margin: 4rem 0;
+          padding: 0;
+        }
+      }
+      ul,
+      li,
+      a {
+        z-index: -1;
+        opacity: 0;
+        display: none;
+      }
+    }
+    nav.open {
+      width: 100vw;
+      z-index: 2;
+      opacity: 1;
+
+      ul,
+      li,
+      a {
+        z-index: 2;
+        opacity: 1;
+        display: block;
       }
     }
   }
-  nav.open {
-    width: 100vw;
-    z-index: 2;
-    opacity: 1;
-  }
+
   li {
     padding-inline: 0.5rem;
   }
@@ -133,10 +145,18 @@ export const HeaderStyled = styled.header`
         display: flex;
         margin: unset;
         align-items: center;
+        width: auto;
+        list-style: none;
+        padding: 0;
 
         li {
           margin: 0 1rem;
           position: relative;
+          width: auto;
+
+          a {
+            width: auto;
+          }
         }
         li::after {
           background-color: var(--my-blue);

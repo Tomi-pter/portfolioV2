@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { HeaderStyled } from "./styled/HeaderStyle";
 import { Menu } from "@styled-icons/feather/Menu";
 import { Close } from "@styled-icons/evil/Close";
@@ -8,11 +8,11 @@ function Header() {
 
   if (menuOpen) {
     document?.querySelector(".headerNav")?.classList.add("open");
-    document.querySelector("body").style.height = "100%";
+    // document.querySelector("body").style.height = "100%";
     document.querySelector("body").style.overflow = "hidden";
   } else {
     document?.querySelector(".headerNav")?.classList.remove("open");
-    document.querySelector("body").style.overflow = "unset";
+    document.querySelector("body").style.overflow = "auto";
   }
 
   const handleMenu = () => {
@@ -23,12 +23,6 @@ function Header() {
   const closeNav = () => {
     setMenuOpen(false);
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      document?.querySelector(".header")?.classList?.add("inView");
-    }, 300);
-  }, []);
 
   return (
     <HeaderStyled className="head">

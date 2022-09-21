@@ -8,7 +8,6 @@ import { Github } from "@styled-icons/boxicons-logos/Github";
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin";
 import { OpenInNew } from "@styled-icons/material-rounded/OpenInNew";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
 function Work() {
   let interval;
@@ -144,12 +143,6 @@ function Work() {
   // const allArr = Array.from(allWorks);
   // worksVisible && allWorks.forEach((all) => all.classList?.add("inView"));
   // !meVisible && document?.querySelector(".me")?.classList?.remove("inView");
-
-  useEffect(() => {
-    setTimeout(() => {
-      document?.querySelector(".me")?.classList?.add("inView");
-    }, 1100);
-  }, []);
 
   return (
     <WorkStyled id="work">

@@ -66,12 +66,6 @@ function Theme() {
     dark && document.querySelector(".foot").classList?.add("dark");
   }, [dark]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      document?.querySelector(".darkToggle")?.classList?.add("inView");
-    }, 500);
-  }, []);
-
   const handleModeToggle = () => {
     setDark(!dark);
 

@@ -20,6 +20,9 @@
     --my-blue: rgb(59, 168, 227);
     --hover-blue: rgb(4, 157, 240);
     --dark: rgb(3, 3, 52);
+    --clipWidth: 50vmin;
+    --clipHeight: 25vmin;
+    --vh: 1vh;
 }
 
 body {
