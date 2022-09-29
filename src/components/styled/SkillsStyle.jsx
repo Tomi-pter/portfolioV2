@@ -82,13 +82,13 @@ export const SkillsStyled = styled.section`
 
   &.dark {
     h2 {
-      color: whitesmoke;
+      color: var(--light);
     }
 
     .tool-marquee {
       .all-tools {
         h3::before {
-          border: 1px solid whitesmoke;
+          border: 1px solid var(--light);
         }
       }
     }

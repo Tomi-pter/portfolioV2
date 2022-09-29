@@ -4,7 +4,8 @@ export const HeaderStyled = styled.header`
   width: 100%;
   position: sticky;
   top: -1px;
-  background-color: whitesmoke;
+  background-color: var(--light);
+  background-color: var(--light);
   transition: all 350ms;
   z-index: 2;
 
@@ -23,7 +24,8 @@ export const HeaderStyled = styled.header`
     }
     nav {
       opacity: 0;
-      transition: all 500ms;
+      background-color: transparent;
+      transition: opacity 500ms, background-color 350ms;
     }
   }
   .header.inView {
@@ -48,7 +50,7 @@ export const HeaderStyled = styled.header`
 
   @media screen and (max-width: 640px) {
     nav {
-      background-color: whitesmoke;
+      background-color: var(--light);
       height: 100vh;
       width: 0;
       position: fixed;
@@ -106,7 +108,7 @@ export const HeaderStyled = styled.header`
 
     &:hover {
       background-color: var(--my-blue);
-      color: whitesmoke;
+      color: var(--light);
     }
   }
   .btnImg {

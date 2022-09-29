@@ -39,6 +39,7 @@ export const ContactStyled = styled.section`
       width: 90%;
       font-family: "ComboRegular";
       transition: all 350ms;
+      background-color: var(--light);
     }
 
     button {
@@ -52,7 +53,7 @@ export const ContactStyled = styled.section`
       transition: all 350ms;
 
       span {
-        color: whitesmoke;
+        color: var(--light);
         position: relative;
       }
 
@@ -60,7 +61,7 @@ export const ContactStyled = styled.section`
         width: 100%;
         height: 130%;
         left: -200px;
-        background-color: whitesmoke;
+        background-color: var(--light);
         position: absolute;
         transition: all 0.35s ease-Out;
         bottom: -15px;
@@ -150,26 +151,26 @@ export const ContactStyled = styled.section`
   }
 
   &.dark {
-    color: whitesmoke;
+    color: var(--light);
 
     form {
       input,
       textarea {
-        color: whitesmoke;
+        color: var(--light);
         background-color: var(--dark);
-        border: 0.5px solid whitesmoke;
+        border: 0.5px solid var(--light);
       }
       input::placeholder,
       textarea::placeholder {
         color: rgba(245, 245, 245, 0.6);
       }
       .vert::after {
-        background-color: whitesmoke;
+        background-color: var(--light);
       }
 
       button {
-        background-color: whitesmoke;
-        border: 1px solid whitesmoke;
+        background-color: var(--light);
+        border: 1px solid var(--light);
 
         span {
           color: var(--dark);
@@ -180,7 +181,7 @@ export const ContactStyled = styled.section`
 
         &:hover {
           span {
-            color: whitesmoke;
+            color: var(--light);
           }
         }
       }

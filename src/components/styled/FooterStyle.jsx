@@ -64,6 +64,6 @@ export const Socials = styled.footer`
   }
 
   &.dark {
-    color: whitesmoke;
+    color: var(--light);
   }
 `;

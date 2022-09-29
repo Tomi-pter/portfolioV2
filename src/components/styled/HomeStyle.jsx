@@ -38,20 +38,59 @@ export const BigMask = styled.mask`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: whitesmoke;
+    /* background: #005aa7;  */
+    /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(
+      to right,
+      #fffde4,
+      #005aa7
+    );  */
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(
+      to right,
+      #fffde4,
+      #005aa7
+    ); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-color: var(--light);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 1.2s cubic-bezier(0.55, 0.02, 0.25, 1.02);
 
+    /* @keyframes rainbow {
+      0% {
+        background-position: 0% 82%;
+      }
+      50% {
+        background-position: 100% 19%;
+      }
+      100% {
+        background-position: 0% 82%;
+      }
+    } */
+
     p {
-      font-size: 0.8rem;
+      width: 20ch;
+      font-size: clamp(0.9rem, 2vw, 35px);
+      font-weight: 800;
+      color: whitesmoke;
+      background-color: #78f391;
+      background-image: linear-gradient(45deg, #f36d93, #07566c);
+      background-size: 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
     }
   }
 `;
 
 export const Container = styled.div`
   background-color: whitesmoke;
+  background-color: var(--light);
   transition: all 350ms;
 
   &.dark {

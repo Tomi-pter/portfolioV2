@@ -72,15 +72,15 @@ export const AboutStyled = styled.section`
   }
 
   &.dark {
-    color: whitesmoke;
-    border: 1px solid whitesmoke;
+    color: var(--light);
+    border: 1px solid var(--light);
 
     .outline {
-      border: 1px solid whitesmoke;
+      border: 1px solid var(--light);
     }
 
     .vert::after {
-      background-color: whitesmoke;
+      background-color: var(--light);
     }
   }
 
