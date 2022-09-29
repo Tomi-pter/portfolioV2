@@ -7,7 +7,7 @@ import { LightMode } from "@styled-icons/material-rounded/LightMode";
 const ThemeStyle = styled.aside`
   position: fixed;
   top: 80vh;
-  left: 1vw;
+  left: 0.75vw;
   z-index: 3;
   opacity: 0;
   transform: translateX(-100%);
@@ -22,8 +22,8 @@ const ThemeStyle = styled.aside`
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: whitesmoke;
-    border: 1px solid var(--dark);
+    background-color: var(--light);
+    border: 2px solid var(--dark);
   }
 
   svg {
@@ -43,11 +43,11 @@ const ThemeStyle = styled.aside`
   &.dark {
     button {
       background-color: var(--dark);
-      border: 1px solid whitesmoke;
+      border: 2px solid var(--light);
     }
     svg {
-      color: whitesmoke;
-      fill: whitesmoke;
+      color: var(--light);
+      fill: var(--light);
     }
   }
 `;
