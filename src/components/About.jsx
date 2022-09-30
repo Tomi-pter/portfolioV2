@@ -18,8 +18,11 @@ function About() {
         </h2>
         <p>
           I'm a Front-end developer & Software engineer who enjoys bringing web
-          designs to life in accessible and responsive ways. I also possess a
-          degree in computer science.
+          designs to life in accessible and responsive ways. With a Computer
+          Science academic background (BS.c) and solid math and coding skills, I
+          have consistently optimized solutions and solved complex technical
+          challenges individually and in collaboration with other teams
+          remotely.
         </p>
         <p>
           I love innovation and I always challenge myself to learn and grow.
