@@ -38,7 +38,7 @@ function Skills() {
           <h3 className="tool">Styled Components</h3>
           <h3 className="tool">Framer-motion</h3>
           <h3 className="tool">GSAP</h3>
-          <h3 className="tool">Redux</h3>
+          <h3 className="tool">Redux/Redux-Toolkit</h3>
         </div>
       </div>
     </SkillsStyled>
