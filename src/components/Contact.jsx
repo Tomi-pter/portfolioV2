@@ -23,12 +23,12 @@ function Contact() {
         initialValues={{ name: "", email: "", message: "" }}
         validationSchema={Yup.object({
           name: Yup.string()
-            .min(2, "Please input your name")
-            .required("Required"),
-          email: Yup.string().email("Invalid email address"),
+            .min(2, "❗Please input your name")
+            .required("❗Please input your name"),
+          email: Yup.string().email("❗ Invalid email address"),
           message: Yup.string()
-            .min(2, "Leave a message pls 😉")
-            .required("Required"),
+            .min(2, "❗Leave a message pls 😉")
+            .required("❗Leave a message pls 😉"),
         })}
         onSubmit={(values) => {
           fetch("https://formsubmit.co/ajax/tomiaiyeniko@gmail.com", {
