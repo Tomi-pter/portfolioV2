@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FredokaOneRegular';
+    src: url('fonts/FredokaOneRegular.eot');
+    src: url('fonts/FredokaOneRegular.eot') format('embedded-opentype'),
+         url('fonts/FredokaOneRegular.woff2') format('woff2'),
+         url('fonts/FredokaOneRegular.woff') format('woff'),
+         url('fonts/FredokaOneRegular.ttf') format('truetype'),
+         url('fonts/FredokaOneRegular.svg#FredokaOneRegular') format('svg');
+}
