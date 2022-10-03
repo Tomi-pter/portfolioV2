@@ -30,15 +30,16 @@ function Skills() {
       <div className="tool-marquee">
         <div className="all-tools">
           <h3 className="tool">Reactjs</h3>
-          <h3 className="tool">JavaScript</h3>
+          <h3 className="tool">JavaScript(ES6+)</h3>
           <h3 className="tool">Nextjs</h3>
-          <h3 className="tool">CSS</h3>
+          <h3 className="tool">HTML/CSS</h3>
           <h3 className="tool">SCSS</h3>
           <h3 className="tool">TailwindCSS</h3>
           <h3 className="tool">Styled Components</h3>
           <h3 className="tool">Framer-motion</h3>
           <h3 className="tool">GSAP</h3>
           <h3 className="tool">Redux/Redux-Toolkit</h3>
+          <h3 className="tool">GraphQL</h3>
         </div>
       </div>
     </SkillsStyled>

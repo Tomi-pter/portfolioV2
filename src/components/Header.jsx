@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HeaderStyled } from "./styled/HeaderStyle";
 import { Menu } from "@styled-icons/feather/Menu";
 import { Close } from "@styled-icons/evil/Close";
+import Resume from "../Resume/tomi_resume.pdf";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,7 +48,7 @@ function Header() {
               <li onClick={closeNav}>
                 <a href="#contact">Contact</a>
               </li>
-              <a href="/" download>
+              <a href={Resume} download>
                 <li className="resume" onClick={closeNav}>
                   Resumé
                 </li>

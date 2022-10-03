@@ -8,6 +8,8 @@ import { Github } from "@styled-icons/boxicons-logos/Github";
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin";
 import { OpenInNew } from "@styled-icons/material-rounded/OpenInNew";
 import { useInView } from "react-intersection-observer";
+// import Svg from "./SVG";
+// import Svg2 from "./SVG2";
 
 function Work() {
   let interval;
@@ -32,7 +34,7 @@ function Work() {
     nameClass === "name" &&
       (interval = setInterval(
         () => (name.textContent = scrambleText(originalName)),
-        100
+        125
       ));
   };
 
@@ -47,18 +49,18 @@ function Work() {
   const works = [
     {
       name: "Kanban Task Management App",
-      desc: "Kanban Task Management App",
+      desc: "Create boards with specific tasks, sort tasks into groups and break down your tasks into subtasks. The perfect productivity tool.",
       tools: ["React.js", "Redux", "Styled Components"],
       img: kanban,
-      github: "",
-      live: "",
+      github: "https://github.com/Tomi-pter/kanban-task-management.git",
+      live: "https://tomi-task-manager.netlify.app/",
     },
     {
       name: "Designo Agency website",
-      desc: "Multipage Designo agency website",
+      desc: "9 page Designo agency website, includes dedicated pages for services rendered, contact, company description and location.",
       tools: ["Next.js", "Styled Components", "Framer-Motion"],
       img: designo,
-      github: "",
+      github: "https://github.com/Tomi-pter/designo-multipage-website.git",
       live: "https://tomi-designo.vercel.app/",
     },
     {
@@ -87,11 +89,11 @@ function Work() {
     },
   ];
 
-  // const { ref: meRef, inView: meVisible } = useInView();
-  const { ref: work1Ref, inView: work1Visible } = useInView({ threshold: 0.5 });
-  const { ref: work2Ref, inView: work2Visible } = useInView({
-    threshold: 0.3,
+  const { ref: meRef, inView: meVisible } = useInView({
+    rootMargin: "0px 0px 20px 0px",
   });
+  const { ref: work1Ref, inView: work1Visible } = useInView({ threshold: 0.5 });
+  const { ref: work2Ref, inView: work2Visible } = useInView({ threshold: 0.3 });
   const { ref: work3Ref, inView: work3Visible } = useInView({ threshold: 0.3 });
   const { ref: work4Ref, inView: work4Visible } = useInView({ threshold: 0.3 });
   const { ref: work5Ref, inView: work5Visible } = useInView({ threshold: 0.3 });
@@ -103,7 +105,14 @@ function Work() {
   //   // rootMargin: " 0px 0px 85px 0px",
   // });
 
-  // meVisible && document?.querySelector(".me")?.classList?.add("inView");
+  meVisible &&
+    document
+      ?.querySelectorAll(".icon")
+      .forEach((ico) => ico.classList?.remove("side"));
+  !meVisible &&
+    document
+      ?.querySelectorAll(".icon")
+      .forEach((ico) => ico.classList?.add("side"));
 
   work1Visible &&
     document
@@ -159,7 +168,7 @@ function Work() {
           Aiyeniko Tomi Peter.
         </p>
         <p className="dev">Frontend Developer</p>
-        <p className="engr">
+        <p className="engr" ref={meRef}>
           Software Engineer <span className="rocket">🚀</span>
         </p>
         <a
@@ -169,6 +178,10 @@ function Work() {
           {/* <span className="slide"></span> */}
           <Linkedin />
         </a>
+        {/* <div className="bg">
+          <Svg />
+          <Svg2 />
+        </div> */}
       </section>
       <section className="works">
         <p className="vert">Featured</p>

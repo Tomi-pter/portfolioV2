@@ -22,11 +22,13 @@ export const WorkStyled = styled.section`
       margin: 2rem 0;
       animation: bounce 2s infinite ease-in-out;
       position: relative;
+      top: 0;
+      left: 0;
       /* overflow: hidden; */
       transform: translateY(100%);
       opacity: 0;
-      transition: background-color 350ms ease-in, transform 500ms 2s,
-        opacity 500ms 2s;
+      transition: background-color 350ms ease-in, transform 500ms 1.5s,
+        opacity 500ms 1.5s, position 500ms, top 500ms, left 500ms;
 
       /* &:after {
         content: "";
@@ -96,7 +98,7 @@ export const WorkStyled = styled.section`
       opacity: 0;
       transform: translateY(100%);
       transition: color 350ms, opacity 500ms, transform 500ms;
-      font-family: "Fredoka One", cursive;
+      font-family: "FredokaOneRegular", cursive;
       font-size: clamp(20px, 6vw, 40px);
       overflow-wrap: break-word;
     }
@@ -127,6 +129,17 @@ export const WorkStyled = styled.section`
     .icon {
       transform: translateY(0);
       opacity: 1;
+
+      &.side {
+        position: fixed;
+        top: 50vh;
+      }
+      &.side:first-of-type {
+        left: 1.5vw;
+      }
+      &.side:last-of-type {
+        left: 91.5vw;
+      }
     }
 
     /* The typing effect */
@@ -200,7 +213,7 @@ export const WorkStyled = styled.section`
     .name {
       display: flex;
       background-color: black;
-      color: whitesmoke;
+      color: var(--light);
       transition: background-color 350ms;
 
       div {
@@ -209,7 +222,8 @@ export const WorkStyled = styled.section`
       p {
         text-align: left;
         font-family: "PoiretOneRegular";
-        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: var(--light);
       }
       .links {
         display: flex;
@@ -219,7 +233,7 @@ export const WorkStyled = styled.section`
       svg {
         width: 20px;
         height: 20px;
-        color: whitesmoke;
+        color: var(--light);
 
         &:hover {
           color: var(--my-blue);
@@ -253,8 +267,8 @@ export const WorkStyled = styled.section`
       margin: 0.25rem;
       padding: 0.125rem 0.25rem;
       font-size: 0.7rem;
-      border: 1px solid whitesmoke;
-      color: whitesmoke;
+      border: 1px solid var(--light);
+      color: var(--light);
     }
   }
 
@@ -320,7 +334,7 @@ export const WorkStyled = styled.section`
       }
       p:nth-of-type(2) {
         /* background-color: var(--my-blue); */
-        /* color: whitesmoke; */
+        /* color: var(--light); */
         text-align: center;
         align-self: center;
       }
@@ -365,6 +379,14 @@ export const WorkStyled = styled.section`
       }
 
       .name {
+        width: 50%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .specific {
+      .name {
         width: 35%;
       }
     }
@@ -387,31 +409,31 @@ export const WorkStyled = styled.section`
     .me {
       /* p:nth-of-type(2) {
         color: var(--dark);
-        background-color: whitesmoke;
+        background-color: var(--light);
       } */
       p:first-of-type {
         color: var(--my-blue);
       }
       p {
-        color: whitesmoke;
+        color: var(--light);
       }
 
       .icon {
-        border: 1px solid whitesmoke;
+        border: 1px solid var(--light);
 
         svg {
-          fill: whitesmoke;
+          fill: var(--light);
         }
         .slide {
-          background-color: whitesmoke;
+          background-color: var(--light);
         }
 
         svg {
-          color: whitesmoke;
+          color: var(--light);
         }
 
         &:hover {
-          background-color: whitesmoke;
+          background-color: var(--light);
 
           svg {
             color: var(--my-blue);
@@ -422,16 +444,16 @@ export const WorkStyled = styled.section`
     }
 
     .vert {
-      color: whitesmoke;
+      color: var(--light);
 
       &::after {
-        background-color: whitesmoke;
+        background-color: var(--light);
       }
     }
 
     .specific {
       .name {
-        /* border: 1px solid whitesmoke; */
+        border: 0.25px solid var(--light);
         background-color: transparent;
       }
     }
@@ -445,8 +467,17 @@ export const WorkStyled = styled.section`
     .works aside {
       svg,
       p {
-        color: whitesmoke;
+        color: var(--light);
       }
     }
   }
+
+  /* .bg {
+    position: absolute;
+
+    svg {
+      max-width: 200px;
+      max-height: 200px;
+    }
+  } */
 `;
