@@ -1,24 +1,24 @@
-import { useState } from "react";
-import { HeaderStyled } from "./styled/HeaderStyle";
-import { Menu } from "@styled-icons/feather/Menu";
-import { Close } from "@styled-icons/evil/Close";
-import Resume from "../Resume/tomi_resume.pdf";
+import { useState } from 'react';
+import { HeaderStyled } from './styled/HeaderStyle';
+import { Menu } from '@styled-icons/feather/Menu';
+import { Close } from '@styled-icons/evil/Close';
+import Resume from '../Resume/tomi_resume_main.pdf';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   if (menuOpen) {
-    document?.querySelector(".headerNav")?.classList.add("open");
+    document?.querySelector('.headerNav')?.classList.add('open');
     // document.querySelector("body").style.height = "100%";
-    document.querySelector("body").style.overflow = "hidden";
+    document.querySelector('body').style.overflow = 'hidden';
   } else {
-    document?.querySelector(".headerNav")?.classList.remove("open");
-    document.querySelector("body").style.overflow = "auto";
+    document?.querySelector('.headerNav')?.classList.remove('open');
+    document.querySelector('body').style.overflow = 'auto';
   }
 
   const handleMenu = () => {
     setMenuOpen(!menuOpen);
-    document?.querySelector(".headerNav")?.classList.toggle("open");
+    document?.querySelector('.headerNav')?.classList.toggle('open');
   };
 
   const closeNav = () => {
@@ -29,7 +29,7 @@ function Header() {
     <HeaderStyled className="head">
       <div className="header">
         <a href="/">
-          <span className="logo">{"<TomiPter />"}</span>
+          <span className="logo">{'<TomiPter />'}</span>
         </a>
         <div className="themeNav">
           <div className="menu">
