@@ -1,9 +1,10 @@
 import { WorkStyled } from './styled/WorkStyle';
 import kanban from '../assets/kanban/kanban.webp';
 import rock from '../assets/rock/rock.webp';
-import room from '../assets/room/room.webp';
+// import room from '../assets/room/room.webp';
 import rest from '../assets/rest/rest.webp';
 import designo from '../assets/designo/designo.webp';
+import pharma from '../assets/pharma/pharma_thumbnail.png';
 import { Github } from '@styled-icons/boxicons-logos/Github';
 import { Linkedin } from '@styled-icons/boxicons-logos/Linkedin';
 import { OpenInNew } from '@styled-icons/material-rounded/OpenInNew';
@@ -48,6 +49,21 @@ function Work() {
 
   const works = [
     {
+      name: 'PremierPharma website & webapp',
+      desc: 'The pharmaceutical wholesaler you trust.',
+      tools: [
+        'Webflow',
+        'React.js',
+        'Redux',
+        'SCSS',
+        'Styled Components',
+        'JQuery'
+      ],
+      img: pharma,
+      // github: 'https://github.com/Tomi-pter/room-homepage.git',
+      live: 'https://www.premierpharma.com/'
+    },
+    {
       name: 'Kanban Task Management App',
       desc: 'Create boards with specific tasks, sort tasks into groups and break down your tasks into subtasks, drag and drop tasks. The perfect productivity tool.',
       tools: [
@@ -84,14 +100,6 @@ function Work() {
       img: rock,
       github: 'https://github.com/Tomi-pter/rock-paper-scissors.git',
       live: 'https://tomi-rockps.netlify.app/'
-    },
-    {
-      name: 'Room Home Page',
-      desc: 'Room homepage with slider functionality to browse pictures',
-      tools: ['HTML', 'CSS', 'JavaScript'],
-      img: room,
-      github: 'https://github.com/Tomi-pter/room-homepage.git',
-      live: 'https://tomi-home-landing.netlify.app/'
     }
   ];
 
