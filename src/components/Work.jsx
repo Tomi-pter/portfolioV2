@@ -57,7 +57,8 @@ function Work() {
         'Redux',
         'SCSS',
         'Styled Components',
-        'JQuery'
+        'JQuery',
+        'React Router'
       ],
       img: pharma,
       // github: 'https://github.com/Tomi-pter/room-homepage.git',
@@ -225,12 +226,20 @@ function Work() {
                   ))}
                 </ul>
                 <section className="links">
-                  <a href={github}>
-                    <Github />
-                  </a>
-                  <a href={live}>
-                    <OpenInNew />
-                  </a>
+                  {github ? (
+                    <>
+                      <a href={github}>
+                        <Github />
+                      </a>
+                      <a href={live}>
+                        <OpenInNew />
+                      </a>{' '}
+                    </>
+                  ) : (
+                    <a href={live}>
+                      <OpenInNew />
+                    </a>
+                  )}
                 </section>
               </div>
             </div>
