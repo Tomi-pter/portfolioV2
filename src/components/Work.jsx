@@ -5,6 +5,7 @@ import rock from '../assets/rock/rock.webp';
 import rest from '../assets/rest/rest.webp';
 import designo from '../assets/designo/designo.webp';
 import pharma from '../assets/pharma/pharma_thumbnail.png';
+import serviceUp from '../assets/serviceup/serviceup_logo.svg';
 import { Github } from '@styled-icons/boxicons-logos/Github';
 import { Linkedin } from '@styled-icons/boxicons-logos/Linkedin';
 import { OpenInNew } from '@styled-icons/material-rounded/OpenInNew';
@@ -49,7 +50,15 @@ function Work() {
 
   const works = [
     {
-      name: 'PremierPharma website & webapp',
+      name: 'ServiceUp',
+      desc: 'ServiceUp is the easiest way to get your car repaired. Sit back and relax while we pick up, repair, and drop your car back off to you.',
+      tools: ['Webflow', 'GSAP', 'JavaScript', 'Zapier', 'Tally'],
+      img: serviceUp,
+      // github: 'https://github.com/Tomi-pter/room-homepage.git',
+      live: 'https://www.serviceup.com/'
+    },
+    {
+      name: 'PremierPharma WebSite & WebApp',
       desc: 'The pharmaceutical wholesaler you trust.',
       tools: [
         'Webflow',
@@ -62,11 +71,11 @@ function Work() {
       ],
       img: pharma,
       // github: 'https://github.com/Tomi-pter/room-homepage.git',
-      live: 'https://www.premierpharma.com/'
+      live: 'https://app.premierpharma.com/login'
     },
     {
       name: 'Kanban Task Management App',
-      desc: 'Create boards with specific tasks, sort tasks into groups and break down your tasks into subtasks, drag and drop tasks. The perfect productivity tool.',
+      desc: 'Create boards with specific tasks, sort into groups and break into subtasks, drag and drop tasks. The perfect productivity tool.',
       tools: [
         'TypeScript',
         'React.js',
@@ -243,8 +252,8 @@ function Work() {
                 </section>
               </div>
             </div>
-            <div className="img">
-              <img src={img} alt="kanban" />
+            <div className={`img work${index}`}>
+              <img src={img} alt={name} />
             </div>
           </div>
         ))}

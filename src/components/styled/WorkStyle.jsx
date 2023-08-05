@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const WorkStyled = styled.section`
   margin: auto;
@@ -6,7 +6,7 @@ export const WorkStyled = styled.section`
   overflow: hidden;
 
   .me {
-    font-family: "HandleeRegular";
+    font-family: 'HandleeRegular';
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -98,7 +98,7 @@ export const WorkStyled = styled.section`
       opacity: 0;
       transform: translateY(100%);
       transition: color 350ms, opacity 500ms, transform 500ms;
-      font-family: "FredokaOneRegular", cursive;
+      font-family: 'FredokaOneRegular', cursive;
       font-size: clamp(20px, 6vw, 40px);
       overflow-wrap: break-word;
     }
@@ -186,11 +186,11 @@ export const WorkStyled = styled.section`
     left: 0;
     top: -5px;
     margin-left: 5%;
-    font-family: "HandleeRegular";
+    font-family: 'HandleeRegular';
   }
 
   .vert::after {
-    content: "";
+    content: '';
     height: 0.25px;
     width: 50px;
     background-color: black;
@@ -221,7 +221,7 @@ export const WorkStyled = styled.section`
       }
       p {
         text-align: left;
-        font-family: "PoiretOneRegular";
+        font-family: 'PoiretOneRegular';
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: var(--light);
       }
@@ -248,6 +248,16 @@ export const WorkStyled = styled.section`
         width: 81vw;
         height: auto;
         object-fit: cover;
+      }
+    }
+
+    .work0 {
+      height: 30vh;
+      background-color: #f2f3de;
+      display: grid;
+      place-items: center;
+      img {
+        margin: auto;
       }
     }
   }
@@ -348,11 +358,11 @@ export const WorkStyled = styled.section`
       writing-mode: vertical-rl;
       margin: 0.5rem 0;
       position: absolute;
-      font-family: "HandleeRegular";
+      font-family: 'HandleeRegular';
       top: unset;
     }
     .vert::after {
-      content: "";
+      content: '';
       height: 50px;
       width: 1px;
       background-color: black;
@@ -375,6 +385,16 @@ export const WorkStyled = styled.section`
           height: inherit;
           width: auto;
           object-fit: contain;
+        }
+      }
+      .work0 {
+        background-color: #f2f3de;
+        width: 45.5%;
+        display: grid;
+        place-items: center;
+        img {
+          width: 300px;
+          margin: auto;
         }
       }
 
