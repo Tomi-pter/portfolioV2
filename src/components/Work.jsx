@@ -102,15 +102,15 @@ function Work() {
       img: rest,
       github: 'https://github.com/Tomi-pter/REST-countries-app.git',
       live: 'https://tomi-know-your-countries.netlify.app/'
-    },
-    {
-      name: 'Rock, Paper, Scissors',
-      desc: 'An interactive single player rock, paper, scissors game with bonus mode (spock & lizard)',
-      tools: ['React.js', 'Styled Components'],
-      img: rock,
-      github: 'https://github.com/Tomi-pter/rock-paper-scissors.git',
-      live: 'https://tomi-rockps.netlify.app/'
     }
+    // {
+    //   name: 'Rock, Paper, Scissors',
+    //   desc: 'An interactive single player rock, paper, scissors game with bonus mode (spock & lizard)',
+    //   tools: ['React.js', 'Styled Components'],
+    //   img: rock,
+    //   github: 'https://github.com/Tomi-pter/rock-paper-scissors.git',
+    //   live: 'https://tomi-rockps.netlify.app/'
+    // }
   ];
 
   const { ref: meRef, inView: meVisible } = useInView({

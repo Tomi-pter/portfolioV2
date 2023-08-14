@@ -390,6 +390,7 @@ export const WorkStyled = styled.section`
       .work0 {
         background-color: #f2f3de;
         width: 45.5%;
+        max-width: 477.27px;
         display: grid;
         place-items: center;
         img {
