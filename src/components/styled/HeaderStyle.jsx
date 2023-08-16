@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderStyled = styled.header`
   width: 100%;
@@ -24,7 +24,6 @@ export const HeaderStyled = styled.header`
     }
     nav {
       opacity: 0;
-      background-color: transparent;
       transition: opacity 500ms, background-color 350ms;
     }
   }
@@ -163,7 +162,7 @@ export const HeaderStyled = styled.header`
         li::after {
           background-color: var(--my-blue);
           bottom: -4px;
-          content: "";
+          content: '';
           height: 2px;
           left: 0px;
           position: absolute;
