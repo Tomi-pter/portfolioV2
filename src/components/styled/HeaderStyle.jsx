@@ -16,16 +16,17 @@ export const HeaderStyled = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* background-color: transparent; */
 
     a {
       transform: translateY(-100%);
       opacity: 0;
-      transition: background-color 350ms, opacity 500ms, transform 500ms;
+      transition: opacity 500ms, transform 500ms;
     }
-    nav {
-      opacity: 0;
-      transition: opacity 500ms, background-color 350ms;
-    }
+  }
+  nav {
+    opacity: 0;
+    transition: opacity 500ms, background-color 350ms;
   }
   .header.inView {
     a {
@@ -190,6 +191,11 @@ export const HeaderStyled = styled.header`
     background-color: var(--dark);
     nav {
       background-color: var(--dark);
+      transition: all 350ms;
+
+      @media screen and (min-width: 641px) {
+        background-color: transparent;
+      }
     }
   }
 `;
