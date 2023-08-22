@@ -1,6 +1,6 @@
 import { WorkStyled } from './styled/WorkStyle';
 import kanban from '../assets/kanban/kanban.webp';
-import rock from '../assets/rock/rock.webp';
+// import rock from '../assets/rock/rock.webp';
 // import room from '../assets/room/room.webp';
 import rest from '../assets/rest/rest.webp';
 import designo from '../assets/designo/designo.webp';
