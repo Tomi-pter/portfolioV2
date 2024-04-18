@@ -21,7 +21,7 @@ export default function Footer() {
         <a href="https://stackoverflow.com/users/16713196/tomi?tab=profile">
           <StackOverflow />
         </a>
-        <a href="https://www.linkedin.com/in/tomi-aiyeniko-725860209/">
+        <a href="https://www.linkedin.com/in/tomi-aiyeniko/">
           <Linkedin />
         </a>
         <a href="https://www.frontendmentor.io/profile/Tomi-pter">
