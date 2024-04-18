@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
-import { SkillsStyled } from './styled/SkillsStyle';
-import { useInView } from 'react-intersection-observer';
+import { useEffect } from "react";
+import { SkillsStyled } from "./styled/SkillsStyle";
+import { useInView } from "react-intersection-observer";
 
 function Skills() {
   useEffect(() => {
-    const skillsMarquee = document.querySelector('.all-tools');
+    const skillsMarquee = document.querySelector(".all-tools");
     const marqueeDuration = skillsMarquee?.childElementCount * 3;
     const allTools = skillsMarquee?.childNodes;
 
@@ -19,7 +19,7 @@ function Skills() {
 
   const { ref: toolsRef, inView: toolsVisible } = useInView({ threshold: 0.3 });
 
-  toolsVisible && document?.querySelector('.skills')?.classList?.add('inView');
+  toolsVisible && document?.querySelector(".skills")?.classList?.add("inView");
 
   return (
     <SkillsStyled className="skills" ref={toolsRef}>
@@ -42,6 +42,7 @@ function Skills() {
           <h3 className="tool">GSAP</h3>
           <h3 className="tool">Redux/Redux-Toolkit</h3>
           <h3 className="tool">GraphQL</h3>
+          <h3 className="tool">MaterialUI</h3>
         </div>
       </div>
     </SkillsStyled>
