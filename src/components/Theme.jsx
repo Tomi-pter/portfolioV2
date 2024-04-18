@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import useStickyState from './useStickyState';
-import styled from 'styled-components';
-import { DarkMode } from '@styled-icons/material-rounded/DarkMode';
-import { LightMode } from '@styled-icons/material-rounded/LightMode';
+import { useEffect } from "react";
+import useStickyState from "./useStickyState";
+import styled from "styled-components";
+import { DarkMode } from "@styled-icons/material-rounded/DarkMode";
+import { LightMode } from "@styled-icons/material-rounded/LightMode";
 
 const ThemeStyle = styled.aside`
   position: fixed;
@@ -55,37 +55,37 @@ const ThemeStyle = styled.aside`
 `;
 
 function Theme() {
-  const [dark, setDark] = useStickyState(false, 'theme');
+  const [dark, setDark] = useStickyState(false, "theme");
 
   useEffect(() => {
-    dark && document.querySelector('.cont').classList?.add('dark');
-    dark && document.querySelector('.head').classList?.add('dark');
-    dark && document.querySelector('#work').classList?.add('dark');
-    dark && document.querySelector('.darkToggle').classList?.add('dark');
-    dark && document.querySelector('.skills').classList?.add('dark');
-    dark && document.querySelector('#about').classList?.add('dark');
-    dark && document.querySelector('#contact').classList?.add('dark');
-    dark && document.querySelector('.foot').classList?.add('dark');
+    dark && document.querySelector(".cont").classList?.add("dark");
+    dark && document.querySelector(".head").classList?.add("dark");
+    dark && document.querySelector("#work").classList?.add("dark");
+    dark && document.querySelector(".darkToggle").classList?.add("dark");
+    dark && document.querySelector(".skills").classList?.add("dark");
+    dark && document.querySelector("#about").classList?.add("dark");
+    dark && document.querySelector("#contact").classList?.add("dark");
+    dark && document.querySelector(".foot").classList?.add("dark");
   }, [dark]);
 
   const handleModeToggle = () => {
     setDark(!dark);
 
-    document?.querySelector('.cont')?.classList?.toggle('dark');
-    document?.querySelector('.head')?.classList?.toggle('dark');
-    document?.querySelector('#work')?.classList?.toggle('dark');
-    document?.querySelector('.darkToggle')?.classList?.toggle('dark');
-    document?.querySelector('.skills')?.classList?.toggle('dark');
-    document?.querySelector('#about')?.classList?.toggle('dark');
-    document?.querySelector('#contact')?.classList?.toggle('dark');
-    document?.querySelector('.foot')?.classList?.toggle('dark');
+    document?.querySelector(".cont")?.classList?.toggle("dark");
+    document?.querySelector(".head")?.classList?.toggle("dark");
+    document?.querySelector("#work")?.classList?.toggle("dark");
+    document?.querySelector(".darkToggle")?.classList?.toggle("dark");
+    document?.querySelector(".skills")?.classList?.toggle("dark");
+    document?.querySelector("#about")?.classList?.toggle("dark");
+    document?.querySelector("#contact")?.classList?.toggle("dark");
+    document?.querySelector(".foot")?.classList?.toggle("dark");
   };
 
   return (
     <ThemeStyle className="darkToggle">
-      <button className="btnImg" onClick={handleModeToggle}>
+      {/* <button className="btnImg" onClick={handleModeToggle}>
         {dark ? <LightMode /> : <DarkMode />}
-      </button>
+      </button> */}
     </ThemeStyle>
   );
 }
