@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SkillsStyled = styled.section`
+export const SkillsStyled = styled.section `
   font-family: "ComboRegular";
   padding: 5rem 0;
 
@@ -58,7 +58,7 @@ export const SkillsStyled = styled.section`
 
       h3 {
         /* font-family: "PoiretOneRegular"; */
-        font-size: 60px;
+        font-size: 2rem;
         padding: 0 30px 0 46px;
         margin: 0.5rem 0;
         position: relative;
@@ -99,6 +99,12 @@ export const SkillsStyled = styled.section`
     .tool-marquee {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @media screen and (min-width: 641px) {
+    h3 {
+      font-size: 4rem;
     }
   }
 `;
