@@ -9,7 +9,7 @@ import {
   Container,
   HomeStyled,
 } from "./styled/HomeStyle";
-import Theme from "./Theme";
+// import Theme from "./Theme";
 import Work from "./Work";
 
 function Home() {
@@ -41,7 +41,7 @@ function Home() {
         <Container className="cont">
           <HomeStyled>
             <Header />
-            <Theme />
+            {/* <Theme /> */}
             <main>
               <Work />
               <Skills />

@@ -128,7 +128,8 @@ function Work() {
   const { ref: work3Ref, inView: work3Visible } = useInView({ threshold: 0.3 });
   const { ref: work4Ref, inView: work4Visible } = useInView({ threshold: 0.3 });
   const { ref: work5Ref, inView: work5Visible } = useInView({ threshold: 0.3 });
-  const { ref: asideRef, inView: asideVisible } = useInView();
+  const { ref: work6Ref, inView: work6Visible } = useInView({ threshold: 0.3 });
+  // const { ref: asideRef, inView: asideVisible } = useInView();
   // const { ref: icon1Ref, inView: icon1Visible } = useInView({
   //   // rootMargin: "-85px 0px 0px  0px",
   // });
@@ -162,9 +163,13 @@ function Work() {
       ?.querySelector(".specific:nth-of-type(4)")
       ?.classList?.add("inView");
   work5Visible &&
+    document
+      ?.querySelector(".specific:nth-of-type(5)")
+      ?.classList?.add("inView");
+  work6Visible &&
     document?.querySelector(".specific:last-of-type")?.classList?.add("inView");
-  asideVisible &&
-    document?.querySelector("#work aside")?.classList?.add("inView");
+  // asideVisible &&
+  //   document?.querySelector("#work aside")?.classList?.add("inView");
 
   // !icon1Visible &&
   //   document?.querySelector("#work .icon:first-of-type")?.classList?.add("out");
@@ -226,7 +231,9 @@ function Work() {
                 ? work3Ref
                 : index === 3
                 ? work4Ref
-                : work5Ref
+                : index === 4
+                ? work5Ref
+                : work6Ref
             }
           >
             <div className="name">

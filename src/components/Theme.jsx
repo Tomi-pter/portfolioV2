@@ -83,9 +83,9 @@ function Theme() {
 
   return (
     <ThemeStyle className="darkToggle">
-      {/* <button className="btnImg" onClick={handleModeToggle}>
+      <button className="btnImg" onClick={handleModeToggle}>
         {dark ? <LightMode /> : <DarkMode />}
-      </button> */}
+      </button>
     </ThemeStyle>
   );
 }

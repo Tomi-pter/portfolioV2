@@ -2,7 +2,6 @@ import { useState } from "react";
 import { HeaderStyled } from "./styled/HeaderStyle";
 import { Menu } from "@styled-icons/feather/Menu";
 import { Close } from "@styled-icons/evil/Close";
-import Resume from "../Resume/tomi_resume_main.pdf";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
