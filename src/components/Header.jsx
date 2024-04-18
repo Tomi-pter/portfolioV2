@@ -1,24 +1,24 @@
-import { useState } from 'react';
-import { HeaderStyled } from './styled/HeaderStyle';
-import { Menu } from '@styled-icons/feather/Menu';
-import { Close } from '@styled-icons/evil/Close';
-import Resume from '../Resume/tomi_resume_main.pdf';
+import { useState } from "react";
+import { HeaderStyled } from "./styled/HeaderStyle";
+import { Menu } from "@styled-icons/feather/Menu";
+import { Close } from "@styled-icons/evil/Close";
+import Resume from "../Resume/tomi_resume_main.pdf";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   if (menuOpen) {
-    document?.querySelector('.headerNav')?.classList.add('open');
+    document?.querySelector(".headerNav")?.classList.add("open");
     // document.querySelector("body").style.height = "100%";
-    document.querySelector('body').style.overflow = 'hidden';
+    document.querySelector("body").style.overflow = "hidden";
   } else {
-    document?.querySelector('.headerNav')?.classList.remove('open');
-    document.querySelector('body').style.overflow = 'auto';
+    document?.querySelector(".headerNav")?.classList.remove("open");
+    document.querySelector("body").style.overflow = "auto";
   }
 
   const handleMenu = () => {
     setMenuOpen(!menuOpen);
-    document?.querySelector('.headerNav')?.classList.toggle('open');
+    document?.querySelector(".headerNav")?.classList.toggle("open");
   };
 
   const closeNav = () => {
@@ -29,7 +29,7 @@ function Header() {
     <HeaderStyled className="head">
       <div className="header">
         <a href="/">
-          <span className="logo">{'<TomiPter />'}</span>
+          <span className="logo">{"<TomiPter />"}</span>
         </a>
         <div className="themeNav">
           <div className="menu">
@@ -48,7 +48,13 @@ function Header() {
               <li onClick={closeNav}>
                 <a href="#contact">Contact</a>
               </li>
-              <a href={Resume} download>
+              <a
+                href={
+                  "https://drive.google.com/file/d/19UiLJ85OaIZ-UL87PP9I64YaSbO1P_9p/view?usp=drive_link"
+                }
+                target="_blank"
+                rel="noreferrer"
+              >
                 <li className="resume" onClick={closeNav}>
                   Resumé
                 </li>
